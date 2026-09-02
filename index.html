@@ -159,33 +159,35 @@
 <div class="top">
   <div class="bar">
     <h1>휴대폰 신청 시스템 화면집</h1>
-    <span class="v">V2.1</span>
-    <span class="count"><b id="pos">1</b> / 10</span>
+    <span class="v">V2</span>
+    <span class="count"><b id="pos">1</b> / 12</span>
   </div>
   <div class="rail" role="tablist" aria-label="화면 선택">
 <div class="rail-group"><span class="rail-label">접수</span>
 <button class="chip" role="tab" aria-selected="true" aria-controls="p0" data-i="0">접수 목록</button>
 <button class="chip" role="tab" aria-selected="false" aria-controls="p1" data-i="1">접수 상세</button>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p2" data-i="2">엑셀 내보내기</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p2" data-i="2">기록 · 개통 처리</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p3" data-i="3">엑셀 내보내기</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p4" data-i="4">현황</button>
 </div>
 <div class="rail-group"><span class="rail-label">고객</span>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p3" data-i="3">신청서 · PC</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p5" data-i="5">신청서 · PC</button>
 </div>
 <div class="rail-group"><span class="rail-label">상품</span>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p4" data-i="4">상품 목록</button>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p5" data-i="5">상품 등록 · 수정</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p6" data-i="6">상품 목록</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p7" data-i="7">상품 등록 · 수정</button>
 </div>
 <div class="rail-group"><span class="rail-label">설정</span>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p6" data-i="6">기준정보</button>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p7" data-i="7">진행상태</button>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p8" data-i="8">환경설정</button>
-<button class="chip" role="tab" aria-selected="false" aria-controls="p9" data-i="9">관리사원 · 권한</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p8" data-i="8">기준정보</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p9" data-i="9">진행상태</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p10" data-i="10">환경설정</button>
+<button class="chip" role="tab" aria-selected="false" aria-controls="p11" data-i="11">관리사원 · 권한</button>
 </div>
   </div>
 </div>
 
 <main>
-<section class="panel" id="p0" role="tabpanel" data-w="1440" data-h="860"><header class="meta"><h2>접수 목록 (관리자 메인)</h2><p class="note">관리자 메인 화면. 로그인하면 바로 여기가 열립니다. 좌측 상태 카운터 사이드바 + 목록에서 인라인 상태 변경 + 체크 후 일괄 변경 — mobls 접수목록 구조 그대로입니다.</p><p class="dim"><span class="grp">접수</span>1440 × 860 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="접수 목록 (관리자 메인)" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p0" role="tabpanel" data-w="1440" data-h="880"><header class="meta"><h2>접수 목록 (관리자 메인)</h2><p class="note">관리자 메인 화면. 로그인하면 바로 여기가 열립니다. 좌측 상태 카운터 사이드바 + 목록에서 인라인 상태 변경 + 체크 후 일괄 변경 — mobls 접수목록 구조 그대로입니다.</p><p class="dim"><span class="grp">접수</span>1440 × 880 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="접수 목록 (관리자 메인)" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -222,7 +224,7 @@
   </style>
 </helmet>
 
-<div class=&quot;rt&quot; style=&quot;width:1440px; min-height:860px; background:#e3e3e3; padding:10px; display:flex; gap:10px;&quot;>
+<div class=&quot;rt&quot; style=&quot;width:1440px; min-height:880px; background:#e3e3e3; padding:10px; display:flex; gap:10px;&quot;>
 
   <!-- ══ 좌측 : 처리상황 카운터 ══ -->
   <div style=&quot;width:196px; flex-shrink:0; display:flex; flex-direction:column; gap:10px;&quot;>
@@ -264,7 +266,8 @@
 
     <div style=&quot;font-size:10.5px; color:#7a7a7a; line-height:1.7; padding:0 3px;&quot;>
       상태 이름을 누르면 그 상태만 걸러 봅니다.<br>
-      별도 대시보드 없이 이 사이드바가<br>
+      로그인하면 이 화면이 먼저 열립니다.<br>
+      별도 대시보드 없이도 이 사이드바가<br>
       그 역할을 합니다 — 레퍼런스 mobls와 같습니다.
     </div>
   </div>
@@ -320,7 +323,7 @@
       <table class=&quot;list&quot;>
         <colgroup>
           <col style=&quot;width:34px&quot;><col style=&quot;width:30px&quot;><col style=&quot;width:30px&quot;><col style=&quot;width:130px&quot;>
-          <col><col style=&quot;width:96px&quot;><col style=&quot;width:88px&quot;><col style=&quot;width:118px&quot;><col style=&quot;width:72px&quot;><col style=&quot;width:98px&quot;>
+          <col><col style=&quot;width:96px&quot;><col style=&quot;width:88px&quot;><col style=&quot;width:118px&quot;><col style=&quot;width:124px&quot;><col style=&quot;width:98px&quot;>
         </colgroup>
         <tr>
           <th><span class=&quot;cb&quot;></span></th><th>✉</th><th>📎</th>
@@ -342,7 +345,7 @@
           <td>26.09.01<br><span class=&quot;muted&quot;>pm 02:36</span></td>
           <td class=&quot;muted&quot;>—</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#e6ecfb; color:#0000cc;&quot;>신청접수</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
 
@@ -356,7 +359,7 @@
           <td>26.09.01<br><span class=&quot;muted&quot;>pm 12:17</span></td>
           <td>26.09.02</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#fff0e0; color:#ff6600;&quot;>개통대기</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
 
@@ -370,7 +373,7 @@
           <td>26.08.31<br><span class=&quot;muted&quot;>pm 01:29</span></td>
           <td class=&quot;muted&quot;>—</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#ffe9e9; color:#ff0099;&quot;>서류미비</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
 
@@ -384,7 +387,7 @@
           <td>26.08.28<br><span class=&quot;muted&quot;>pm 08:15</span></td>
           <td>26.08.29</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#ff0000; color:#fff; border-color:#c00;&quot;>개통보류</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
 
@@ -398,7 +401,7 @@
           <td>26.08.28<br><span class=&quot;muted&quot;>pm 03:34</span></td>
           <td>26.08.29</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#e4f2e4; color:#008800;&quot;>개통완료</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
 
@@ -412,7 +415,7 @@
           <td>26.08.28<br><span class=&quot;muted&quot;>pm 03:05</span></td>
           <td>26.08.28</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#e2eefb; color:#0066cc;&quot;>배송완료</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
 
@@ -426,7 +429,7 @@
           <td>26.08.27<br><span class=&quot;muted&quot;>pm 04:13</span></td>
           <td>26.08.27</td>
           <td><span class=&quot;stat&quot; style=&quot;background:#ececec; color:#333;&quot;>해피콜완료</span></td>
-          <td><span class=&quot;btn&quot;>열람</span></td>
+          <td><span class=&quot;btn&quot;>열람</span> <span class=&quot;btn&quot;>기록</span></td>
           <td><span class=&quot;btn&quot;>전달하기</span></td>
         </tr>
       </table>
@@ -461,7 +464,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p1" role="tabpanel" data-w="1000" data-h="1400" hidden><header class="meta"><h2>접수 상세 · 신청서 원본</h2><p class="note">고객이 본 신청서를 그대로 재현하고 접수번호·공급자·신청인·날짜 계약 블록으로 끝냅니다. 인쇄해서 쓰는 화면이고, [수정하기]로 값을 고칩니다.</p><p class="dim"><span class="grp">접수</span>1000 × 1400 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="접수 상세 · 신청서 원본" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p1" role="tabpanel" data-w="1000" data-h="1630" hidden><header class="meta"><h2>접수 상세 · 신청서 원본</h2><p class="note">고객이 본 신청서를 그대로 재현하고 접수번호·공급자·신청인·날짜 계약 블록으로 끝냅니다. 인쇄해서 쓰는 화면이고, 고객에게 자동 발송된 완료 메일을 여기서 재발송합니다.</p><p class="dim"><span class="grp">접수</span>1000 × 1630 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="접수 상세 · 신청서 원본" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -490,12 +493,13 @@
     .tip { color:#999999; font-size:11px; }
     .btn { display:inline-block; height:24px; line-height:22px; padding:0 11px; border:1px solid #adadad; background:linear-gradient(#fdfdfd,#e4e4e4); font-size:12px; color:#111;  white-space:nowrap; }
     .btn.big { height:32px; line-height:30px; padding:0 16px; font-size:13px; }
+    .adm { background:#fffdf0; }
     .stat { display:inline-block; height:22px; line-height:20px; padding:0 10px; border:1px solid #999; font-size:11.5px; font-weight:bold; }
     .thumb { width:112px; height:72px; border:1px solid #c9c9c9; background:#dcdcdc; display:flex; align-items:center; justify-content:center; font-size:10.5px; color:#666; filter:blur(1.6px); }
   </style>
 </helmet>
 
-<div class=&quot;rt&quot; style=&quot;width:1000px; min-height:1400px; background:#ffffff; display:flex; flex-direction:column;&quot;>
+<div class=&quot;rt&quot; style=&quot;width:1000px; min-height:1630px; background:#ffffff; display:flex; flex-direction:column;&quot;>
 
   <!-- 상단 바 -->
   <div class=&quot;topbar&quot;>
@@ -504,7 +508,7 @@
     <span style=&quot;color:#555&quot;>010-****-1234</span>
     <span class=&quot;stat&quot; style=&quot;background:#e6ecfb; color:#0000cc; margin-left:6px;&quot;>신청접수</span>
     <span style=&quot;margin-left:auto; display:flex; gap:7px;&quot;>
-      <span class=&quot;btn&quot;>수정하기</span>
+      <span class=&quot;btn&quot;>기록 / 수정</span>
       <span class=&quot;btn&quot;>인쇄모드</span>
       <span class=&quot;btn&quot;>인쇄하기</span>
       <span class=&quot;btn&quot;>전달하기</span>
@@ -519,7 +523,7 @@
     <table class=&quot;fm&quot;>
       <colgroup><col style=&quot;width:104px&quot;><col style=&quot;width:254px&quot;><col style=&quot;width:104px&quot;><col></colgroup>
       <tr><td class=&quot;item&quot;>이름 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;>김민수</td>
-          <td class=&quot;item&quot;>이메일</td><td class=&quot;val&quot;>minsu****@naver.com</td></tr>
+          <td class=&quot;item&quot;>이메일 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;>minsu****@naver.com <span class=&quot;tip&quot;>완료 메일 발송됨</span></td></tr>
       <tr><td class=&quot;item&quot;>번호이동<br>대상번호 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;>010 - **** - 1234</td>
           <td class=&quot;item&quot;>비상연락번호 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;>010 - **** - 7788</td></tr>
       <tr><td class=&quot;item&quot;>기존 통신사 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;>KT</td>
@@ -598,6 +602,23 @@
           <td class=&quot;val&quot;><span class=&quot;btn&quot;>재제출 링크 발급</span> <span class=&quot;tip&quot;>고객에게 SMS로 1회용 업로드 주소를 보냅니다. 유효 48시간.</span></td></tr>
     </table>
 
+    <!-- 관리자 입력: 개통 · 배송 -->
+    <div style=&quot;margin:22px 2px 9px; font-weight:bold; color:#1a4fa0; font-size:13px;&quot;>개통 · 배송 처리 <span class=&quot;tip&quot; style=&quot;font-weight:normal&quot;>— 관리자 입력 항목 (기록 화면에서 수정)</span></div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:104px&quot;><col style=&quot;width:254px&quot;><col style=&quot;width:104px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>개통 번호</td><td class=&quot;val adm&quot;>010-2345-6789</td>
+          <td class=&quot;item&quot;>개통 일시</td><td class=&quot;val adm&quot;>2026-09-02 11:20</td></tr>
+      <tr><td class=&quot;item&quot;>단말 일련번호</td><td class=&quot;val adm&quot;>356938035643809</td>
+          <td class=&quot;item&quot;>유심 번호</td><td class=&quot;val adm&quot;>8982000012345678901</td></tr>
+      <tr><td class=&quot;item&quot;>개통처</td><td class=&quot;val adm&quot;>본사 개통팀</td>
+          <td class=&quot;item&quot;>판매채널</td><td class=&quot;val adm&quot;>네이버밴드 band1</td></tr>
+      <tr><td class=&quot;item&quot;>택배사</td><td class=&quot;val adm&quot;>CJ대한통운</td>
+          <td class=&quot;item&quot;>운송장 번호</td><td class=&quot;val adm&quot;>123456789012</td></tr>
+      <tr><td class=&quot;item&quot;>해피콜</td><td class=&quot;val adm&quot;>완료 · 2026-09-03 <span class=&quot;tip&quot;>담당 이수진</span></td>
+          <td class=&quot;item&quot;>정산 회차</td><td class=&quot;val adm&quot;>2026-10 (1차)</td></tr>
+      <tr><td class=&quot;item&quot;>완료 메일</td><td class=&quot;val&quot; colspan=&quot;3&quot;>2026-09-01 14:36 발송 · minsu****@naver.com &amp;nbsp;<span class=&quot;btn&quot;>재발송</span>
+          <span class=&quot;tip&quot; style=&quot;margin-left:6px&quot;>접수 즉시 자동 발송된 신청서 사본. 내용을 고친 뒤 재발송하면 최신 내용으로 다시 보냅니다. 첨부는 포함되지 않습니다.</span></td></tr>
+    </table>
 
     <!-- 계약서 블록 -->
     <div style=&quot;display:flex; align-items:center; justify-content:space-between; margin-top:30px;&quot;>
@@ -611,13 +632,14 @@
     </div>
 
     <div style=&quot;display:flex; gap:9px; justify-content:flex-end; margin-top:26px;&quot;>
-      <span class=&quot;btn big&quot;>수정하기</span>
+      <span class=&quot;btn big&quot;>기록 / 수정</span>
       <span class=&quot;btn big&quot;>인쇄하기</span>
       <span class=&quot;btn big&quot;>목록으로</span>
     </div>
 
     <div class=&quot;tip&quot; style=&quot;margin-top:22px; border-top:1px solid #e5e5e5; padding-top:11px; line-height:1.8;&quot;>
       레퍼런스 mobls는 접수 상세를 <b>고객이 본 신청서 그대로 + 접수번호 · 공급자 · 신청인 · 날짜 계약 블록</b>으로 렌더하고 인쇄합니다. 그 구조를 그대로 가져왔습니다.<br>
+      다만 mobls에는 개통번호 · 개통일 · 일련번호 · 운송장 칸이 없어 관리자메모에 손으로 적습니다. 그 부분은 따라가지 않고 전용 항목으로 만들었습니다 (REVIEW B1 · B2).<br>
       개인정보는 마스킹이 기본이고, 전체 보기 · 신분증 보기는 권한자만, 열람 시 감사 로그가 남습니다.
     </div>
 
@@ -627,7 +649,179 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p2" role="tabpanel" data-w="660" data-h="1060" hidden><header class="meta"><h2>엑셀 내보내기</h2><p class="note">mobls dump_odlist.php의 컬럼 선택형을 가져오고 마스킹·감사 로그를 더했습니다.</p><p class="dim"><span class="grp">접수</span>660 × 1060 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="엑셀 내보내기" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p2" role="tabpanel" data-w="820" data-h="1540" hidden><header class="meta"><h2>기록 · 개통 · 배송 처리</h2><p class="note">mobls가 관리자메모에 손으로 적던 개통번호·개통일·일련번호·유심번호·운송장을 전용 항목으로 올렸습니다 (REVIEW B1·B2·H6). 이력에 완료 메일 발송도 남습니다.</p><p class="dim"><span class="grp">접수</span>820 × 1540 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="기록 · 개통 · 배송 처리" loading="lazy" srcdoc="<!doctype html>
+<html>
+<head>
+  <meta charset=&quot;utf-8&quot;>
+  
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin:0; }
+    .rt, .rt * { font-family:&quot;Dotum&quot;,&quot;돋움&quot;,&quot;Malgun Gothic&quot;,&quot;맑은 고딕&quot;,sans-serif; font-size:12px; color:#222; box-sizing:border-box; }
+    .hd { background:#f2f2f2; border-bottom:1px solid #c9c9c9; padding:9px 14px; }
+    .hd .rn { color:#1a4fa0; font-weight:bold; font-size:14px; }
+    .sec { margin:16px 14px 0; border:1px solid #b9b9b9; background:#ececec; padding:13px 11px 11px; position:relative; }
+    .sec > .st { position:absolute; top:-8px; left:14px; background:#ececec; padding:0 8px; color:#20558a; font-weight:bold; font-size:12px; }
+    table.fm { width:100%; border-collapse:collapse; table-layout:fixed; background:#fff; }
+    .fm td { border:1px solid #d6d6d6; border-top:0; padding:6px 7px 5px; vertical-align:middle; }
+    .fm tr:first-child td { border-top:1px solid #d6d6d6; }
+    .fm td.item { background:#e9e9e9; border-left:1px solid #cccccc; font-size:11px; font-weight:bold; color:#333; line-height:1.35; }
+    .fm td.val { background:#ffffff; }
+    .req { color:#ff0000; font-weight:bold; }
+    .tf { display:inline-block; height:23px; line-height:21px; border:1px solid #8f8f9d; background:#fff; padding:0 5px; font-size:12px; color:#333; vertical-align:middle; }
+    .tf.ph { color:#9aa0aa; }
+    .tf.ess { background:#FAFAD2; }
+    .sel { display:inline-block; height:23px; line-height:21px; border:1px solid #8f8f9d; background:#fff; padding:0 17px 0 5px; font-size:12px; color:#333; vertical-align:middle; position:relative; }
+    .sel.ess { background:#FAFAD2; }
+    .sel:after { content:&quot;▾&quot;; position:absolute; right:4px; top:0; font-size:9px; color:#555; }
+    .ta { border:1px solid #8f8f9d; background:#fff; padding:6px 8px; font-size:11.5px; color:#9aa0aa; line-height:1.6; }
+    .ta.ess { background:#FAFAD2; }
+    .btn { display:inline-block; height:24px; line-height:22px; padding:0 11px; border:1px solid #adadad; background:linear-gradient(#fdfdfd,#e4e4e4); font-size:12px; color:#111;  white-space:nowrap; }
+    .btn.big { height:34px; line-height:32px; padding:0 22px; font-size:13px; }
+    .tip { color:#999; font-size:11px; }
+    .stat { display:inline-block; height:22px; line-height:20px; padding:0 10px; border:1px solid #999; font-size:11.5px; font-weight:bold; }
+    .hist { width:100%; border-collapse:collapse; background:#fff; }
+    .hist th { background:linear-gradient(#fcfcfc,#d8d8d8); border:1px solid #b9b9b9; height:28px; font-size:11px; }
+    .hist td { border:1px solid #dcdcdc; padding:6px; font-size:11px; text-align:center; color:#444; }
+  </style>
+</helmet>
+
+<div class=&quot;rt&quot; style=&quot;width:820px; min-height:1540px; background:#e3e3e3; padding-bottom:18px; display:flex; flex-direction:column;&quot;>
+
+  <div class=&quot;hd&quot;>
+    <div><span class=&quot;rn&quot;>n-20260901-0004</span> &amp;nbsp;<span style=&quot;color:#333&quot;>SKT 갤럭시 S25 256G 번호이동신청서 band1</span></div>
+    <div style=&quot;margin-top:4px; color:#666; font-size:11px;&quot;>
+      접수 2026.09.01 14:36 &amp;nbsp;·&amp;nbsp; 수정 2회 &amp;nbsp;·&amp;nbsp; 최종 수정 2026.09.02 11:24 이수진 &amp;nbsp;·&amp;nbsp; ip 49.174.xxx.xxx
+    </div>
+  </div>
+
+  <!-- 처리상황 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>처리상황 변경</div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:110px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>현재 상태</td>
+          <td class=&quot;val&quot;><span class=&quot;stat&quot; style=&quot;background:#e6ecfb; color:#0000cc;&quot;>신청접수</span>
+            <span style=&quot;color:#888; margin:0 8px&quot;>▶</span>
+            <span class=&quot;sel ess&quot; style=&quot;width:140px&quot;>개통대기</span></td></tr>
+      <tr><td class=&quot;item&quot;>변경 사유 <span class=&quot;req&quot;>*</span></td>
+          <td class=&quot;val&quot;><div class=&quot;ta ess&quot; style=&quot;height:44px;&quot;>서류 확인 완료, 익일 개통 예약</div>
+            <div class=&quot;tip&quot; style=&quot;margin-top:4px&quot;>보류 · 취소 · 서류미비로 바꿀 때는 사유가 필수입니다. 사유는 이력에 남고 고객 안내 문자에 인용됩니다.</div></td></tr>
+      <tr><td class=&quot;item&quot;>개통 예정일</td>
+          <td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:110px&quot;>2026-09-02</span> <span class=&quot;btn&quot;>달력</span></td></tr>
+    </table>
+  </div>
+
+  <!-- 개통 처리 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>개통 처리 <span style=&quot;color:#cc0000; font-weight:normal&quot;>— REVIEW B1</span></div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:110px&quot;><col style=&quot;width:250px&quot;><col style=&quot;width:110px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>개통 번호 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;><span class=&quot;tf ess&quot; style=&quot;width:150px&quot;>010-2345-6789</span></td>
+          <td class=&quot;item&quot;>개통 일시 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;><span class=&quot;tf ess&quot; style=&quot;width:150px&quot;>2026-09-02 11:20</span></td></tr>
+      <tr><td class=&quot;item&quot;>단말 일련번호</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:190px&quot;>356938035643809</span> <span class=&quot;tip&quot;>IMEI</span></td>
+          <td class=&quot;item&quot;>유심 번호</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:200px&quot;>8982000012345678901</span></td></tr>
+      <tr><td class=&quot;item&quot;>개통처</td><td class=&quot;val&quot;><span class=&quot;sel&quot; style=&quot;width:170px&quot;>본사 개통팀</span></td>
+          <td class=&quot;item&quot;>개통 담당</td><td class=&quot;val&quot;><span class=&quot;sel&quot; style=&quot;width:150px&quot;>이수진</span></td></tr>
+    </table>
+    <div class=&quot;tip&quot; style=&quot;margin-top:6px&quot;>
+      개통 번호와 개통 일시를 채워야 상태를 <b>개통완료</b>로 바꿀 수 있습니다.
+      약정 시작일과 해피콜 마감(개통일 +15일)이 개통 일시에서 계산되고, 통신사 정산 대사 키도 개통번호 · 일련번호입니다.
+    </div>
+  </div>
+
+  <!-- 배송 처리 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>배송 처리 <span style=&quot;color:#cc0000; font-weight:normal&quot;>— REVIEW B2</span></div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:110px&quot;><col style=&quot;width:250px&quot;><col style=&quot;width:110px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>택배사</td><td class=&quot;val&quot;><span class=&quot;sel&quot; style=&quot;width:170px&quot;>CJ대한통운</span></td>
+          <td class=&quot;item&quot;>운송장 번호</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:180px&quot;>123456789012</span> <span class=&quot;btn&quot;>배송조회</span></td></tr>
+      <tr><td class=&quot;item&quot;>발송일</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>2026-09-02</span></td>
+          <td class=&quot;item&quot;>수령 확인</td><td class=&quot;val&quot;><span class=&quot;tf ph&quot; style=&quot;width:150px&quot;>미확인</span></td></tr>
+    </table>
+  </div>
+
+  <!-- 해피콜 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>해피콜</div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:110px&quot;><col style=&quot;width:250px&quot;><col style=&quot;width:110px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>결과</td><td class=&quot;val&quot;><span class=&quot;sel&quot; style=&quot;width:150px&quot;>완료</span> <span class=&quot;tip&quot;>완료 · 부재 · 거부 · 재통화</span></td>
+          <td class=&quot;item&quot;>통화일</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>2026-09-03</span></td></tr>
+      <tr><td class=&quot;item&quot;>담당</td><td class=&quot;val&quot;><span class=&quot;sel&quot; style=&quot;width:150px&quot;>이수진</span></td>
+          <td class=&quot;item&quot;>마감</td><td class=&quot;val&quot; style=&quot;color:#cc6600&quot;>D-13 <span class=&quot;tip&quot;>개통일 +15일</span></td></tr>
+      <tr><td class=&quot;item&quot;>메모</td><td class=&quot;val&quot; colspan=&quot;3&quot;><div class=&quot;ta&quot; style=&quot;height:38px;&quot;>본인 확인 완료. 요금제 · 약정 조건 재안내함.</div></td></tr>
+    </table>
+  </div>
+
+  <!-- 고객 정보 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>고객 정보 수정</div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:110px&quot;><col style=&quot;width:250px&quot;><col style=&quot;width:110px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>이름</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>김민수</span></td>
+          <td class=&quot;item&quot;>연락처</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>010-****-1234</span> <span class=&quot;btn&quot;>전체</span></td></tr>
+      <tr><td class=&quot;item&quot;>이메일</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:200px&quot;>minsu****@naver.com</span></td>
+          <td class=&quot;item&quot;>비상연락번호</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>010-****-7788</span></td></tr>
+      <tr><td class=&quot;item&quot;>배송지</td><td class=&quot;val&quot; colspan=&quot;3&quot;><span class=&quot;tf&quot; style=&quot;width:540px&quot;>[06234] 서울특별시 강남구 테헤란로 000, 000동 0000호</span></td></tr>
+      <tr><td class=&quot;item&quot;>고객메모</td><td class=&quot;val&quot; colspan=&quot;3&quot;><div class=&quot;ta&quot; style=&quot;height:34px;&quot;>평일 오후에만 통화 가능합니다.</div></td></tr>
+    </table>
+    <div class=&quot;tip&quot; style=&quot;margin-top:6px&quot;>고객 정보를 고치면 무엇을 어떻게 바꿨는지 감사 로그에 남습니다.</div>
+  </div>
+
+  <!-- 접수 항목값 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>접수 항목값 수정</div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:180px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>요금제</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:280px&quot;>5GX 프라임</span> <span class=&quot;tip&quot;>접수 당시 스냅샷 · 월 89,000원</span></td></tr>
+      <tr><td class=&quot;item&quot;>색상</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:200px&quot;>티타늄 실버블루</span></td></tr>
+      <tr><td class=&quot;item&quot;>약정기간</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:110px&quot;>24개월</span></td></tr>
+      <tr><td class=&quot;item&quot;>은행 / 예금주 / 계좌</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:110px&quot;>국민은행</span> <span class=&quot;tf&quot; style=&quot;width:100px&quot;>김민수</span> <span class=&quot;tf&quot; style=&quot;width:180px&quot;>****-**-****56</span></td></tr>
+    </table>
+  </div>
+
+  <!-- 관리자 메모 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>관리자 메모</div>
+    <div class=&quot;ta&quot; style=&quot;height:56px; color:#333;&quot;>고객이 09/02 오전 개통 희망. 유심 후납 안내 완료.</div>
+  </div>
+
+  <!-- 이력 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>변경 이력</div>
+    <table class=&quot;hist&quot;>
+      <colgroup><col style=&quot;width:130px&quot;><col style=&quot;width:96px&quot;><col style=&quot;width:130px&quot;><col><col style=&quot;width:90px&quot;></colgroup>
+      <tr><th>일시</th><th>담당</th><th>상태</th><th>사유 · 내용</th><th>IP</th></tr>
+      <tr><td>2026-09-02 11:24</td><td>이수진</td><td><span class=&quot;stat&quot; style=&quot;background:#fff0e0; color:#ff6600;&quot;>개통대기</span></td><td style=&quot;text-align:left; padding-left:10px&quot;>서류 확인 완료, 익일 개통 예약</td><td>10.0.x.x</td></tr>
+      <tr><td>2026-09-01 15:02</td><td>이수진</td><td>—</td><td style=&quot;text-align:left; padding-left:10px&quot;>신분증 열람</td><td>10.0.x.x</td></tr>
+      <tr><td>2026-09-01 14:36</td><td>시스템</td><td>—</td><td style=&quot;text-align:left; padding-left:10px&quot;>접수 완료 메일 발송 → minsu****@naver.com</td><td>—</td></tr>
+      <tr><td>2026-09-01 14:36</td><td>—</td><td><span class=&quot;stat&quot; style=&quot;background:#e6ecfb; color:#0000cc;&quot;>신청접수</span></td><td style=&quot;text-align:left; padding-left:10px&quot;>고객 제출</td><td>49.174.x.x</td></tr>
+    </table>
+  </div>
+
+  <div style=&quot;display:flex; gap:9px; justify-content:flex-end; margin:18px 14px 0;&quot;>
+    <span class=&quot;btn big&quot; style=&quot;font-weight:bold&quot;>저장</span>
+    <span class=&quot;btn big&quot;>저장 후 목록</span>
+    <span class=&quot;btn big&quot;>취소</span>
+  </div>
+
+  <div class=&quot;tip&quot; style=&quot;margin:16px 14px 0; line-height:1.8;&quot;>
+    레퍼런스 mobls의 <b>기록(formmail_modify.php)</b> 화면을 골격으로 삼되, mobls가 관리자메모에 손으로 적던
+    개통번호 · 개통일 · 일련번호 · 유심번호 · 운송장을 전용 항목으로 끌어올렸습니다.
+    상태 변경 사유와 해피콜 결과도 전용 칸입니다 (REVIEW B1 · B2 · H6).
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
+"></iframe></div></div></section>
+<section class="panel" id="p3" role="tabpanel" data-w="660" data-h="1060" hidden><header class="meta"><h2>엑셀 내보내기</h2><p class="note">mobls dump_odlist.php의 컬럼 선택형을 가져오고 개통·배송 컬럼과 마스킹·감사 로그를 더했습니다.</p><p class="dim"><span class="grp">접수</span>660 × 1060 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="엑셀 내보내기" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -760,7 +954,163 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p3" role="tabpanel" data-w="760" data-h="1730" hidden><header class="meta"><h2>고객 신청서 · PC</h2><p class="note">애드폼 기본 스킨 그대로 — 돋움 13px, 라벨셀 #e9e9e9, 필수칸 #FAFAD2, 빨간 안내문구, 섹션 구분선. 출고가·할부원금은 선택지 1개짜리 라디오로 노출해 금액이 접수 데이터에 스냅샷으로 남습니다.</p><p class="dim"><span class="grp">고객</span>760 × 1730 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="고객 신청서 · PC" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p4" role="tabpanel" data-w="1440" data-h="770" hidden><header class="meta"><h2>현황 · 대시보드</h2><p class="note">mobls에는 대시보드가 없습니다. 상태 카운터는 접수목록에 두고 여기에는 지금 손이 필요한 건(경과시간·마감임박·미발송)과 채널 성과만 얹었습니다 (REVIEW H4).</p><p class="dim"><span class="grp">접수</span>1440 × 770 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="현황 · 대시보드" loading="lazy" srcdoc="<!doctype html>
+<html>
+<head>
+  <meta charset=&quot;utf-8&quot;>
+  
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin:0; }
+    .rt, .rt * { font-family:&quot;Dotum&quot;,&quot;돋움&quot;,&quot;Malgun Gothic&quot;,&quot;맑은 고딕&quot;,sans-serif; font-size:12px; color:#222; box-sizing:border-box; }
+    .panel { border:1px solid #b9b9b9; background:#ececec; padding:14px 12px 12px; position:relative; }
+    .panel > .pt { position:absolute; top:-8px; left:50%; transform:translateX(-50%); background:#ececec; padding:0 10px; color:#20558a; font-weight:bold; font-size:12px; letter-spacing:1px; white-space:nowrap; }
+    .btn { display:inline-block; height:24px; line-height:22px; padding:0 10px; border:1px solid #adadad; background:linear-gradient(#fdfdfd,#e4e4e4); font-size:12px; color:#111;  white-space:nowrap; }
+    .tile { background:#fff; border:1px solid #c8c8c8; padding:11px 12px; display:flex; flex-direction:column; gap:5px; }
+    .tile .lb { font-size:11.5px; font-weight:bold; }
+    .tile .nm { font-size:26px; font-weight:bold; line-height:1; }
+    .tile .sub { font-size:10.5px; color:#8a8a8a; }
+    table.list { width:100%; border-collapse:collapse; background:#fff; }
+    .list th { background:linear-gradient(#fcfcfc,#d4d4d4); border:1px solid #b3b3b3; height:32px; font-size:11.5px; font-weight:bold; color:#333; }
+    .list td { border:1px solid #dcdcdc; padding:7px 6px; text-align:center; font-size:11.5px; color:#333; }
+    .stat { display:inline-block; height:21px; line-height:19px; padding:0 9px; border:1px solid #999; font-size:11px; font-weight:bold; }
+    .bar { height:15px; background:#2b6cd4; display:inline-block; vertical-align:-3px; }
+    .bar.b2 { background:#5b93e0; } .bar.b3 { background:#8fb6ea; } .bar.b4 { background:#c0d5f3; }
+    .sla { display:inline-block; padding:1px 7px; font-size:11px; font-weight:bold; border:1px solid; }
+    .sla.ok { color:#0a7a34; border-color:#a8d8b8; background:#eef8f1; }
+    .sla.warn { color:#b26a00; border-color:#e8ceA0; background:#fdf5e6; }
+    .sla.bad { color:#fff; border-color:#c00; background:#e02020; }
+    .tip { color:#999; font-size:11px; line-height:1.65; }
+  </style>
+</helmet>
+
+<div class=&quot;rt&quot; style=&quot;width:1440px; min-height:770px; background:#e3e3e3; padding:12px; display:flex; flex-direction:column; gap:12px;&quot;>
+
+  <!-- 오늘 -->
+  <div class=&quot;panel&quot;>
+    <div class=&quot;pt&quot;>2026년 9월 1일 (화) 현황</div>
+    <div style=&quot;display:grid; grid-template-columns:repeat(7,1fr); gap:8px;&quot;>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #0000cc;&quot;><div class=&quot;lb&quot; style=&quot;color:#0000cc&quot;>신청접수</div><div class=&quot;nm&quot; style=&quot;color:#0000cc&quot;>128</div><div class=&quot;sub&quot;>오늘 +14</div></div>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #ff0099;&quot;><div class=&quot;lb&quot; style=&quot;color:#ff0099&quot;>서류미비</div><div class=&quot;nm&quot; style=&quot;color:#ff0099&quot;>27</div><div class=&quot;sub&quot;>재요청 필요</div></div>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #ff6600;&quot;><div class=&quot;lb&quot; style=&quot;color:#ff6600&quot;>개통대기</div><div class=&quot;nm&quot; style=&quot;color:#ff6600&quot;>41</div><div class=&quot;sub&quot;>오늘 예정 18</div></div>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #ff0000;&quot;><div class=&quot;lb&quot; style=&quot;color:#ff0000&quot;>개통보류</div><div class=&quot;nm&quot; style=&quot;color:#ff0000&quot;>62</div><div class=&quot;sub&quot;>3일 이상 24</div></div>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #008800;&quot;><div class=&quot;lb&quot; style=&quot;color:#008800&quot;>개통완료</div><div class=&quot;nm&quot; style=&quot;color:#008800&quot;>388</div><div class=&quot;sub&quot;>오늘 +9</div></div>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #0066cc;&quot;><div class=&quot;lb&quot; style=&quot;color:#0066cc&quot;>배송완료</div><div class=&quot;nm&quot; style=&quot;color:#0066cc&quot;>431</div><div class=&quot;sub&quot;>미발송 12</div></div>
+      <div class=&quot;tile&quot; style=&quot;border-left:4px solid #333;&quot;><div class=&quot;lb&quot;>해피콜 마감임박</div><div class=&quot;nm&quot; style=&quot;color:#b26a00&quot;>7</div><div class=&quot;sub&quot;>D-3 이내</div></div>
+    </div>
+  </div>
+
+  <div style=&quot;display:flex; gap:12px; flex:1;&quot;>
+
+    <!-- 처리 대기 큐 -->
+    <div class=&quot;panel&quot; style=&quot;flex:1.55;&quot;>
+      <div class=&quot;pt&quot;>처리 대기 큐 — 오래 머문 순</div>
+      <table class=&quot;list&quot;>
+        <colgroup><col style=&quot;width:130px&quot;><col style=&quot;width:112px&quot;><col><col style=&quot;width:112px&quot;><col style=&quot;width:96px&quot;><col style=&quot;width:96px&quot;></colgroup>
+        <tr><th>접수번호</th><th>고객</th><th>상품 · 채널</th><th>상태</th><th>경과</th><th></th></tr>
+        <tr>
+          <td>n-20260825-0007</td><td>서지호<span style=&quot;color:#999&quot;>(910206)</span></td>
+          <td style=&quot;text-align:left; padding-left:10px&quot;>SKT 갤럭시 S25 · band2</td>
+          <td><span class=&quot;stat&quot; style=&quot;background:#ff0000; color:#fff; border-color:#c00;&quot;>개통보류</span></td>
+          <td><span class=&quot;sla bad&quot;>7일 4시간</span></td><td><span class=&quot;btn&quot;>열람</span></td>
+        </tr>
+        <tr>
+          <td>n-20260827-0003</td><td>한예린<span style=&quot;color:#999&quot;>(000917)</span></td>
+          <td style=&quot;text-align:left; padding-left:10px&quot;>KT 갤럭시 A16 · 당근마켓</td>
+          <td><span class=&quot;stat&quot; style=&quot;background:#ffe9e9; color:#ff0099;&quot;>서류미비</span></td>
+          <td><span class=&quot;sla bad&quot;>5일 1시간</span></td><td><span class=&quot;btn&quot;>열람</span></td>
+        </tr>
+        <tr>
+          <td>n-20260828-0006</td><td>최유진<span style=&quot;color:#999&quot;>(771102)</span></td>
+          <td style=&quot;text-align:left; padding-left:10px&quot;>SKT 갤럭시 S25 · band2</td>
+          <td><span class=&quot;stat&quot; style=&quot;background:#ff0000; color:#fff; border-color:#c00;&quot;>개통보류</span></td>
+          <td><span class=&quot;sla bad&quot;>4일 6시간</span></td><td><span class=&quot;btn&quot;>열람</span></td>
+        </tr>
+        <tr>
+          <td>n-20260831-0011</td><td>박준호<span style=&quot;color:#999&quot;>(020825)</span></td>
+          <td style=&quot;text-align:left; padding-left:10px&quot;>LG헬로모바일 버디3 · band1</td>
+          <td><span class=&quot;stat&quot; style=&quot;background:#ffe9e9; color:#ff0099;&quot;>서류미비</span></td>
+          <td><span class=&quot;sla warn&quot;>1일 2시간</span></td><td><span class=&quot;btn&quot;>열람</span></td>
+        </tr>
+        <tr>
+          <td>n-20260901-0004</td><td>김민수<span style=&quot;color:#999&quot;>(880701)</span></td>
+          <td style=&quot;text-align:left; padding-left:10px&quot;>SKT 갤럭시 S25 · band1</td>
+          <td><span class=&quot;stat&quot; style=&quot;background:#e6ecfb; color:#0000cc;&quot;>신청접수</span></td>
+          <td><span class=&quot;sla ok&quot;>3시간</span></td><td><span class=&quot;btn&quot;>열람</span></td>
+        </tr>
+        <tr>
+          <td>n-20260901-0003</td><td>이서연<span style=&quot;color:#999&quot;>(950314)</span></td>
+          <td style=&quot;text-align:left; padding-left:10px&quot;>KT 갤럭시 A16 · band2</td>
+          <td><span class=&quot;stat&quot; style=&quot;background:#fff0e0; color:#ff6600;&quot;>개통대기</span></td>
+          <td><span class=&quot;sla ok&quot;>5시간</span></td><td><span class=&quot;btn&quot;>열람</span></td>
+        </tr>
+      </table>
+      <div class=&quot;tip&quot; style=&quot;margin-top:7px&quot;>
+        상태에 머문 시간이 기준입니다. 신청접수 4시간 · 서류미비 24시간 · 개통보류 48시간을 넘기면 색이 바뀝니다 (REVIEW H4).
+      </div>
+    </div>
+
+    <!-- 우측 -->
+    <div style=&quot;flex:1; display:flex; flex-direction:column; gap:12px;&quot;>
+
+      <div class=&quot;panel&quot;>
+        <div class=&quot;pt&quot;>채널별 유입 — 최근 7일</div>
+        <table style=&quot;width:100%; border-collapse:collapse;&quot;>
+          <tr><td style=&quot;width:120px; padding:5px 0;&quot;>네이버밴드 band1</td>
+              <td><span class=&quot;bar&quot; style=&quot;width:186px&quot;></span> <b>84</b> <span class=&quot;tip&quot;>개통 62 · 74%</span></td></tr>
+          <tr><td style=&quot;padding:5px 0;&quot;>네이버밴드 band2</td>
+              <td><span class=&quot;bar b2&quot; style=&quot;width:132px&quot;></span> <b>59</b> <span class=&quot;tip&quot;>개통 41 · 69%</span></td></tr>
+          <tr><td style=&quot;padding:5px 0;&quot;>당근마켓</td>
+              <td><span class=&quot;bar b3&quot; style=&quot;width:60px&quot;></span> <b>27</b> <span class=&quot;tip&quot;>개통 14 · 52%</span></td></tr>
+          <tr><td style=&quot;padding:5px 0;&quot;>중고나라</td>
+              <td><span class=&quot;bar b4&quot; style=&quot;width:26px&quot;></span> <b>12</b> <span class=&quot;tip&quot;>개통 5 · 42%</span></td></tr>
+          <tr><td style=&quot;padding:5px 0;&quot;>직접유입</td>
+              <td><span class=&quot;bar b4&quot; style=&quot;width:14px&quot;></span> <b>6</b> <span class=&quot;tip&quot;>개통 4 · 67%</span></td></tr>
+        </table>
+        <div class=&quot;tip&quot; style=&quot;margin-top:7px&quot;>상품별 구간 카운터를 초기화하면 이 집계의 구간도 함께 리셋됩니다.</div>
+      </div>
+
+      <div class=&quot;panel&quot; style=&quot;flex:1;&quot;>
+        <div class=&quot;pt&quot;>상품별 접수 — 최근 7일 TOP 5</div>
+        <table class=&quot;list&quot;>
+          <colgroup><col><col style=&quot;width:64px&quot;><col style=&quot;width:64px&quot;><col style=&quot;width:72px&quot;></colgroup>
+          <tr><th>상품</th><th>접수</th><th>개통</th><th>전환율</th></tr>
+          <tr><td style=&quot;text-align:left; padding-left:10px&quot;>KT 갤럭시 A16 SM-A165N</td><td>61</td><td>44</td><td>72%</td></tr>
+          <tr><td style=&quot;text-align:left; padding-left:10px&quot;>SKT 갤럭시 S25 256G</td><td>48</td><td>36</td><td>75%</td></tr>
+          <tr><td style=&quot;text-align:left; padding-left:10px&quot;>LG U+ 갤럭시 Z플립7</td><td>39</td><td>24</td><td>62%</td></tr>
+          <tr><td style=&quot;text-align:left; padding-left:10px&quot;>LG헬로모바일 갤럭시 버디3</td><td>22</td><td>13</td><td>59%</td></tr>
+          <tr><td style=&quot;text-align:left; padding-left:10px&quot;>SKT 갤럭시 와이드7</td><td>18</td><td>9</td><td>50%</td></tr>
+        </table>
+      </div>
+
+      <div class=&quot;panel&quot;>
+        <div class=&quot;pt&quot;>알림</div>
+        <div style=&quot;display:flex; flex-direction:column; gap:6px; font-size:11.5px; color:#333;&quot;>
+          <div><b style=&quot;color:#cc0000&quot;>·</b> 개통보류 24건이 48시간을 넘겼습니다. <span class=&quot;btn&quot; style=&quot;margin-left:6px&quot;>보기</span></div>
+          <div><b style=&quot;color:#cc0000&quot;>·</b> 해피콜 마감 D-3 이내 7건. <span class=&quot;btn&quot; style=&quot;margin-left:6px&quot;>보기</span></div>
+          <div><b style=&quot;color:#b26a00&quot;>·</b> 신분증 자동 파기 예정 31건 (오늘 밤 배치).</div>
+          <div><b style=&quot;color:#b26a00&quot;>·</b> upload 폴더 1.84 GB / 경고수위 80% 도달까지 여유 있음.</div>
+          <div><b style=&quot;color:#0a7a34&quot;>·</b> 2026-08 정산 대상 388건 — 엑셀 내보내기 준비됨.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class=&quot;tip&quot; style=&quot;padding:0 2px;&quot;>
+    레퍼런스 mobls에는 대시보드가 없고 접수목록 좌측 상태 카운터가 그 역할을 합니다. 그 카운터는 접수목록에 그대로 두고,
+    여기에는 <b>지금 손이 필요한 건</b>(경과시간 · 마감임박 · 미발송)과 채널 성과를 얹었습니다.
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
+"></iframe></div></div></section>
+<section class="panel" id="p5" role="tabpanel" data-w="760" data-h="1800" hidden><header class="meta"><h2>고객 신청서 · PC</h2><p class="note">애드폼 기본 스킨 그대로 — 돋움 13px, 라벨셀 #e9e9e9, 필수칸 #FAFAD2, 빨간 안내문구, 섹션 구분선. 출고가·할부원금은 선택지 1개짜리 라디오로 노출해 금액이 접수 데이터에 스냅샷으로 남습니다. 전송하면 신청서 사본이 입력한 이메일로 발송되므로 이메일이 필수입니다.</p><p class="dim"><span class="grp">고객</span>760 × 1800 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="고객 신청서 · PC" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -804,7 +1154,7 @@
   </style>
 </helmet>
 
-<div class=&quot;rt&quot; style=&quot;width:760px; min-height:1730px; background:#ffffff; padding:26px 22px 30px; display:flex; flex-direction:column;&quot;>
+<div class=&quot;rt&quot; style=&quot;width:760px; min-height:1800px; background:#ffffff; padding:26px 22px 30px; display:flex; flex-direction:column;&quot;>
 
   <div class=&quot;ftitle&quot;>SKT 갤럭시 S25 256G ㅣ 번호이동 신청서 <span class=&quot;sub&quot;>band1</span></div>
 
@@ -814,14 +1164,14 @@
     <tr>
       <td class=&quot;item&quot;>이름 <span class=&quot;req&quot;>*</span></td>
       <td class=&quot;val&quot;><span class=&quot;tf ess&quot; style=&quot;width:150px&quot;></span></td>
-      <td class=&quot;item&quot;>이메일</td>
-      <td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:190px&quot;></span></td>
+      <td class=&quot;item&quot;>이메일 <span class=&quot;req&quot;>*</span></td>
+      <td class=&quot;val&quot;><span class=&quot;tf ess&quot; style=&quot;width:190px&quot;></span><div class=&quot;tip&quot; style=&quot;margin-top:3px&quot;>접수 완료 후 작성한 신청서 사본이 이 주소로 발송됩니다.</div></td>
     </tr>
     <tr>
       <td class=&quot;item&quot;>번호이동<br>대상번호 <span class=&quot;req&quot;>*</span></td>
       <td class=&quot;val&quot;><span class=&quot;sel ess&quot; style=&quot;width:62px&quot;>선택</span><span class=&quot;dash&quot;>-</span><span class=&quot;tf ess&quot; style=&quot;width:48px&quot;></span><span class=&quot;dash&quot;>-</span><span class=&quot;tf ess&quot; style=&quot;width:48px&quot;></span></td>
       <td class=&quot;item&quot;>비상연락번호 <span class=&quot;req&quot;>*</span></td>
-      <td class=&quot;val&quot;><span class=&quot;sel ess&quot; style=&quot;width:62px&quot;>010</span><span class=&quot;dash&quot;>-</span><span class=&quot;tf ess&quot; style=&quot;width:48px&quot;></span><span class=&quot;dash&quot;>-</span><span class=&quot;tf ess&quot; style=&quot;width:48px&quot;></span></td>
+      <td class=&quot;val&quot;><span class=&quot;sel ess&quot; style=&quot;width:62px&quot;>010</span><span class=&quot;dash&quot;>-</span><span class=&quot;tf ess&quot; style=&quot;width:48px&quot;></span><span class=&quot;dash&quot;>-</span><span class=&quot;tf ess&quot; style=&quot;width:48px&quot;></span><div class=&quot;tip&quot; style=&quot;margin-top:3px&quot;>가입자 본인 외 연락 가능한 번호</div></td>
     </tr>
     <tr>
       <td class=&quot;item&quot;>기존 통신사 <span class=&quot;req&quot;>*</span></td>
@@ -976,12 +1326,11 @@
   </table>
 
   <!-- 하단 -->
-  <div style=&quot;display:flex; justify-content:flex-end; margin-top:26px;&quot;>
-    <div style=&quot;display:flex; gap:10px;&quot;>
-      <span class=&quot;btn&quot;>전송하기</span>
-      <span class=&quot;btn&quot;>다시작성</span>
-    </div>
+  <div style=&quot;display:flex; justify-content:center; gap:10px; margin-top:26px;&quot;>
+    <span class=&quot;btn&quot;>전송하기</span>
+    <span class=&quot;btn&quot;>다시작성</span>
   </div>
+  <div class=&quot;tip&quot; style=&quot;text-align:center; margin-top:10px;&quot;>전송하면 접수번호가 표시되고, 작성한 신청서 사본이 입력한 이메일로 발송됩니다.</div>
 
   <div class=&quot;tip&quot; style=&quot;margin-top:18px; border-top:1px solid #e5e5e5; padding-top:10px;&quot;>
     합계 · 월 납부 예상액은 신청 화면에 표시하지 않습니다 (레퍼런스 mobls도 스킨에서 합계영역을 숨겨 운용).<br>
@@ -994,7 +1343,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p4" role="tabpanel" data-w="1440" data-h="880" hidden><header class="meta"><h2>상품 목록 · 신청 URL 모달</h2><p class="note">mobls는 채널마다 폼을 복제해 128개를 운영합니다. 여기서는 상품 하나에 채널을 붙이고 URL만 조합별로 발급합니다 (REVIEW B4).</p><p class="dim"><span class="grp">상품</span>1440 × 880 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="상품 목록 · 신청 URL 모달" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p6" role="tabpanel" data-w="1440" data-h="880" hidden><header class="meta"><h2>상품 목록 · 신청 URL 모달</h2><p class="note">mobls는 채널마다 폼을 복제해 128개를 운영합니다. 여기서는 상품 하나에 채널을 붙이고 URL만 조합별로 발급합니다 (REVIEW B4).</p><p class="dim"><span class="grp">상품</span>1440 × 880 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="상품 목록 · 신청 URL 모달" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -1231,7 +1580,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p5" role="tabpanel" data-w="1440" data-h="940" hidden><header class="meta"><h2>상품 등록 · 수정</h2><p class="note">요금제는 이름 + 월 요금(선택)만. 색상은 기종에 등록해 둔 것 중에서 고릅니다. 지원금·계산은 다루지 않습니다.</p><p class="dim"><span class="grp">상품</span>1440 × 940 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="상품 등록 · 수정" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p7" role="tabpanel" data-w="1440" data-h="990" hidden><header class="meta"><h2>상품 등록 · 수정</h2><p class="note">요금제는 이름 + 월 요금(선택)만. 색상은 기종에 등록해 둔 것 중에서 고릅니다. 접수 완료 메일은 환경설정 기본값을 따르되 상품마다 끄고 켤 수 있습니다.</p><p class="dim"><span class="grp">상품</span>1440 × 990 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="상품 등록 · 수정" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -1273,7 +1622,7 @@
   </style>
 </helmet>
 
-<div class=&quot;rt&quot; style=&quot;width:1440px; min-height:940px; background:#e3e3e3; padding-bottom:18px; display:flex; flex-direction:column;&quot;>
+<div class=&quot;rt&quot; style=&quot;width:1440px; min-height:990px; background:#e3e3e3; padding-bottom:18px; display:flex; flex-direction:column;&quot;>
 
   <div class=&quot;hd&quot;>
     <span>상품 수정 — SKT 갤럭시 S25 256G <span style=&quot;font-weight:normal; color:#888; font-size:12px;&quot;>(P-1041)</span></span>
@@ -1338,6 +1687,11 @@
           <tr><td class=&quot;item&quot;>구비서류</td>
               <td class=&quot;val&quot;><span class=&quot;cb on&quot;></span>신분증 사본 필수 &amp;nbsp;&amp;nbsp;<span class=&quot;cb on&quot;></span>미성년자 추가서류 안내 노출 &amp;nbsp;&amp;nbsp;<span class=&quot;cb&quot;></span>통장 사본 필수
                 <div class=&quot;tip&quot; style=&quot;margin-top:4px&quot;>첨부 최대 3개 · 개당 1MB · jpg, jpeg, png, pdf</div></td></tr>
+          <tr><td class=&quot;item&quot;>접수 시 메일</td>
+              <td class=&quot;val&quot;>
+                <span class=&quot;cb on&quot;></span>관리자에게 알림 <span class=&quot;tip&quot;>order@example.co.kr</span> &amp;nbsp;&amp;nbsp;&amp;nbsp;
+                <span class=&quot;cb on&quot;></span>접수 고객에게 신청서 사본 <span class=&quot;tip&quot;>고객이 입력한 이메일로 · 접수 즉시</span>
+                <div class=&quot;tip&quot; style=&quot;margin-top:4px&quot;>기본값은 <b>환경설정 › 접수 완료 메일</b>을 따르고, 이 상품만 다르게 하려면 여기서 끕니다. 제목 · 안내문 · 포함 범위 · 마스킹은 환경설정에서 정합니다.</div></td></tr>
         </table>
       </div>
 
@@ -1420,7 +1774,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p6" role="tabpanel" data-w="1440" data-h="990" hidden><header class="meta"><h2>설정 · 기준정보</h2><p class="note">요금제 · 기종/색상 · 통신사 · 판매채널 · 개통처. 연결된 데이터가 있으면 삭제 대신 사용중지.</p><p class="dim"><span class="grp">설정</span>1440 × 990 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 기준정보" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p8" role="tabpanel" data-w="1440" data-h="990" hidden><header class="meta"><h2>설정 · 기준정보</h2><p class="note">요금제 · 기종/색상 · 통신사 · 판매채널 · 개통처. 연결된 데이터가 있으면 삭제 대신 사용중지.</p><p class="dim"><span class="grp">설정</span>1440 × 990 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 기준정보" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -1604,7 +1958,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p7" role="tabpanel" data-w="1000" data-h="1360" hidden><header class="meta"><h2>설정 · 진행상태</h2><p class="note">색상코드 직접 입력 · 아래에 추가 · 상황이동 · 참조 없을 때만 삭제 — mobls situation_modify.php 그대로. 상태 전이 규칙을 더했습니다 (REVIEW H7).</p><p class="dim"><span class="grp">설정</span>1000 × 1360 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 진행상태" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p9" role="tabpanel" data-w="1000" data-h="1360" hidden><header class="meta"><h2>설정 · 진행상태</h2><p class="note">색상코드 직접 입력 · 아래에 추가 · 상황이동 · 참조 없을 때만 삭제 — mobls situation_modify.php 그대로. 상태 전이 규칙을 더했습니다 (REVIEW H7).</p><p class="dim"><span class="grp">설정</span>1000 × 1360 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 진행상태" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -1791,7 +2145,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p8" role="tabpanel" data-w="1000" data-h="1180" hidden><header class="meta"><h2>설정 · 환경설정</h2><p class="note">사업자정보·첨부 용량·업로드 폴더 경고는 mobls form_env.php. 보존·파기 정책과 중복 탐지를 더했습니다 (REVIEW H1·H3).</p><p class="dim"><span class="grp">설정</span>1000 × 1180 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 환경설정" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p10" role="tabpanel" data-w="1000" data-h="1880" hidden><header class="meta"><h2>설정 · 환경설정</h2><p class="note">접수 완료 메일 — 고객이 입력한 이메일로 신청서 사본을 보내는 설정(발신·제목·포함 범위·마스킹·안내문·미리보기)이 여기 있습니다. 사업자정보·첨부·보존 정책도 함께.</p><p class="dim"><span class="grp">설정</span>1000 × 1880 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 환경설정" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -1830,13 +2184,13 @@
   </style>
 </helmet>
 
-<div class=&quot;rt&quot; style=&quot;width:1000px; min-height:1180px; background:#e3e3e3; padding-bottom:18px; display:flex; flex-direction:column;&quot;>
+<div class=&quot;rt&quot; style=&quot;width:1000px; min-height:1880px; background:#e3e3e3; padding-bottom:18px; display:flex; flex-direction:column;&quot;>
 
   <div class=&quot;hd&quot;>설정 · 환경설정</div>
 
   <!-- 사업자정보 -->
   <div class=&quot;sec&quot;>
-    <div class=&quot;st&quot;>사업자 정보 <span style=&quot;font-weight:normal; color:#888&quot;>— 문자 · 안내 문구에 사용</span></div>
+    <div class=&quot;st&quot;>사업자 정보 <span style=&quot;font-weight:normal; color:#888&quot;>— 접수 완료 메일 · 인쇄물 하단에 표시</span></div>
     <table class=&quot;fm&quot;>
       <colgroup><col style=&quot;width:126px&quot;><col style=&quot;width:300px&quot;><col style=&quot;width:126px&quot;><col></colgroup>
       <tr><td class=&quot;item&quot;>상호 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:220px&quot;>글락스텔레콤</span></td>
@@ -1847,7 +2201,7 @@
       <tr><td class=&quot;item&quot;>업태 / 종목</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:130px&quot;>도소매</span> <span class=&quot;tf&quot; style=&quot;width:130px&quot;>통신기기</span></td>
           <td class=&quot;item&quot;>대표전화 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>1600-0000</span></td></tr>
       <tr><td class=&quot;item&quot;>전자우편 <span class=&quot;req&quot;>*</span></td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:220px&quot;>help@example.co.kr</span></td>
-          <td class=&quot;item&quot;>신청서 하단 표시</td><td class=&quot;val&quot;><span class=&quot;rd&quot;></span>표시 &amp;nbsp;<span class=&quot;rd on&quot;></span>숨김 <span class=&quot;tip&quot;>현재 신청서에는 표시하지 않음</span></td></tr>
+          <td class=&quot;item&quot;>신청서 하단 표시</td><td class=&quot;val&quot;><span class=&quot;rd&quot;></span>표시 &amp;nbsp;<span class=&quot;rd on&quot;></span>숨김 <span class=&quot;tip&quot;>2026-09-02 결정 — 신청서에서 뺌</span></td></tr>
       <tr><td class=&quot;item&quot;>발신번호 사전등록</td><td class=&quot;val&quot; colspan=&quot;3&quot;><span class=&quot;tf&quot; style=&quot;width:150px&quot;>1600-0000</span>
           <span class=&quot;tip&quot; style=&quot;margin-left:8px&quot;>문자 발송에 쓰는 번호. 통신사 사전등록이 끝난 번호만 넣으세요.</span></td></tr>
     </table>
@@ -1898,12 +2252,63 @@
     </div>
   </div>
 
-  <!-- 알림 -->
+  <!-- 접수 완료 메일 (고객) -->
   <div class=&quot;sec&quot;>
-    <div class=&quot;st&quot;>알림</div>
+    <div class=&quot;st&quot;>접수 완료 메일 — 고객에게 신청서 사본 발송</div>
     <table class=&quot;fm&quot;>
       <colgroup><col style=&quot;width:126px&quot;><col style=&quot;width:300px&quot;><col style=&quot;width:126px&quot;><col></colgroup>
-      <tr><td class=&quot;item&quot;>접수 알림 메일</td><td class=&quot;val&quot;><span class=&quot;cb on&quot;></span>새 접수가 들어오면 발송</td>
+      <tr><td class=&quot;item&quot;>발송 여부</td><td class=&quot;val&quot;><span class=&quot;cb on&quot;></span>전송 완료 즉시, 고객이 신청서에 입력한 이메일로 발송</td>
+          <td class=&quot;item&quot;>발신 주소</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:190px&quot;>noreply@example.co.kr</span> <span class=&quot;btn&quot;>테스트 발송</span></td></tr>
+      <tr><td class=&quot;item&quot;>메일 제목</td><td class=&quot;val&quot; colspan=&quot;3&quot;><span class=&quot;tf&quot; style=&quot;width:560px&quot;>[글락스텔레콤] {고객명}님의 {상품명} 신청서가 접수되었습니다 · {접수번호}</span></td></tr>
+      <tr><td class=&quot;item&quot;>포함 범위</td><td class=&quot;val&quot; colspan=&quot;3&quot;>
+          <span class=&quot;cb on&quot;></span>고객이 입력한 항목 전체 &amp;nbsp;&amp;nbsp;
+          <span class=&quot;cb on&quot;></span>상품 고정값(출고가 · 할부원금 · 유심비 · 약정) &amp;nbsp;&amp;nbsp;
+          <span class=&quot;cb on&quot;></span>동의한 약관 전문 &amp;nbsp;&amp;nbsp;
+          <span class=&quot;cb no&quot; style=&quot;background:#f0f0f0; border-color:#d0d0d0;&quot;></span><span style=&quot;color:#999&quot;>첨부파일</span> <span class=&quot;tip&quot;>— 신분증 사본은 어떤 경우에도 메일로 보내지 않습니다</span></td></tr>
+      <tr><td class=&quot;item&quot;>개인정보 표시</td><td class=&quot;val&quot; colspan=&quot;3&quot;>
+          <span class=&quot;rd on&quot;></span>계좌번호 · 생년월일은 뒷자리 마스킹 <span class=&quot;tip&quot;>(예: 국민 ****-**-****56 · 88****)</span> &amp;nbsp;&amp;nbsp;
+          <span class=&quot;rd&quot;></span>입력한 그대로</td></tr>
+      <tr><td class=&quot;item&quot;>안내문 (본문 상단)</td><td class=&quot;val&quot; colspan=&quot;3&quot;>
+          <div style=&quot;border:1px solid #8f8f9d; background:#fff; padding:6px 8px; font-size:11.5px; color:#555; line-height:1.7;&quot;>
+            {고객명}님, 신청해 주셔서 감사합니다. 아래는 접수된 신청서 내용입니다.<br>
+            잘못 입력된 항목이 있으면 이 메일에 회신하거나 1600-0000으로 연락 주세요. 확인 후 개통을 진행해 드리겠습니다.
+          </div>
+          <div class=&quot;tip&quot; style=&quot;margin-top:4px&quot;>쓸 수 있는 치환자 : <span class=&quot;mono&quot;>{고객명} {접수번호} {상품명} {통신사} {가입구분} {접수일시}</span></div></td></tr>
+      <tr><td class=&quot;item&quot;>발송 실패 시</td><td class=&quot;val&quot;><span class=&quot;rd on&quot;></span>접수 목록에 표시하고 관리자에게 알림 &amp;nbsp;<span class=&quot;rd&quot;></span>무시</td>
+          <td class=&quot;item&quot;>상품별 설정</td><td class=&quot;val tip&quot;>상품 등록 화면에서 상품마다 끄고 켤 수 있습니다. 기본값은 이 설정입니다.</td></tr>
+      <tr><td class=&quot;item&quot;>미리보기</td><td class=&quot;val&quot; colspan=&quot;3&quot;>
+          <div style=&quot;border:1px solid #c9c9c9; background:#fff; padding:0; font-size:11px; color:#333; line-height:1.6;&quot;>
+            <div style=&quot;background:#f4f4f4; border-bottom:1px solid #ddd; padding:6px 10px; color:#555;&quot;>
+              <b>제목</b> [글락스텔레콤] 김민수님의 갤럭시 S25 256G 신청서가 접수되었습니다 · n-20260901-0004<br>
+              <b>보낸사람</b> noreply@example.co.kr &amp;nbsp;&amp;nbsp; <b>받는사람</b> minsu****@naver.com
+            </div>
+            <div style=&quot;padding:9px 12px;&quot;>
+              김민수님, 신청해 주셔서 감사합니다. 아래는 접수된 신청서 내용입니다. …
+              <table style=&quot;width:100%; border-collapse:collapse; margin-top:8px; font-size:11px;&quot;>
+                <tr><td style=&quot;width:96px; background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>접수번호</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>n-20260901-0004 &amp;nbsp;<span style=&quot;color:#999&quot;>2026-09-01 14:36</span></td></tr>
+                <tr><td style=&quot;background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>신청 상품</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>SKT 갤럭시 S25 256G · 번호이동 · 티타늄 실버블루</td></tr>
+                <tr><td style=&quot;background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>출고가 / 할부원금</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>1,155,000원 / 0원 · 24개월 · 유심 8,800원(후납)</td></tr>
+                <tr><td style=&quot;background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>요금제 / 약정</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>5GX 프라임 · 24개월</td></tr>
+                <tr><td style=&quot;background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>요금 납부</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>자동이체 · 국민은행 · 김민수 · ****-**-****56</td></tr>
+                <tr><td style=&quot;background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>배송지</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>[06234] 서울특별시 강남구 테헤란로 000, 000동 0000호 · 김민수</td></tr>
+                <tr><td style=&quot;background:#e9e9e9; border:1px solid #d6d6d6; padding:3px 6px; font-weight:bold;&quot;>동의</td><td style=&quot;border:1px solid #d6d6d6; padding:3px 6px;&quot;>약정 필수사항 v1.3 · 개인정보 수집이용 v2.0 · 대필 및 해피콜 인증 — 2026-09-01 14:36 동의 <span style=&quot;color:#999&quot;>(전문 아래 첨부)</span></td></tr>
+              </table>
+              <div style=&quot;color:#999; margin-top:6px;&quot;>… 이하 신청서 항목 전체와 동의한 약관 전문이 이어집니다. 이 메일은 발신 전용입니다.</div>
+            </div>
+          </div></td></tr>
+    </table>
+    <div class=&quot;tip&quot; style=&quot;margin-top:7px&quot;>
+      레퍼런스 mobls는 폼마다 <b>고객접수시 메일발송여부 : 관리자에게 / 접수고객에게</b>를 두고 접수 내용을 메일로 보냅니다.
+      그 기능을 전역 설정으로 올리고 제목 · 안내문 · 포함 범위 · 마스킹을 정하게 했습니다. 신청서의 이메일이 필수가 된 이유입니다.
+    </div>
+  </div>
+
+  <!-- 알림 -->
+  <div class=&quot;sec&quot;>
+    <div class=&quot;st&quot;>관리자 알림 · 고객 문자</div>
+    <table class=&quot;fm&quot;>
+      <colgroup><col style=&quot;width:126px&quot;><col style=&quot;width:300px&quot;><col style=&quot;width:126px&quot;><col></colgroup>
+      <tr><td class=&quot;item&quot;>접수 알림 메일</td><td class=&quot;val&quot;><span class=&quot;cb on&quot;></span>새 접수가 들어오면 관리자에게 발송</td>
           <td class=&quot;item&quot;>받는 주소</td><td class=&quot;val&quot;><span class=&quot;tf&quot; style=&quot;width:230px&quot;>order@example.co.kr</span> <span class=&quot;btn&quot;>테스트</span></td></tr>
       <tr><td class=&quot;item&quot;>고객 확인 문자</td><td class=&quot;val&quot;><span class=&quot;cb on&quot;></span>접수 완료 시 &amp;nbsp;<span class=&quot;cb on&quot;></span>개통 완료 시 &amp;nbsp;<span class=&quot;cb on&quot;></span>서류 재요청 시</td>
           <td class=&quot;item&quot;>발송 수단</td><td class=&quot;val&quot;><span class=&quot;sel&quot; style=&quot;width:150px&quot;>SMS (문자)</span></td></tr>
@@ -1937,7 +2342,7 @@
 
   <div class=&quot;tip&quot; style=&quot;margin:14px 16px 0;&quot;>
     레퍼런스 mobls의 <b>form_env.php</b>(사업자정보 · 첨부 저장위치 · 폴더 용량 경고)를 골격으로 삼고,
-    보존 · 파기 정책과 알림 · 중복 탐지를 더했습니다.
+    보존 · 파기 정책과 접수 완료 메일(고객) · 중복 탐지를 더했습니다.
   </div>
 
 </div>
@@ -1945,7 +2350,7 @@
 </body>
 </html>
 "></iframe></div></div></section>
-<section class="panel" id="p9" role="tabpanel" data-w="1200" data-h="1040" hidden><header class="meta"><h2>설정 · 관리사원 / 권한</h2><p class="note">mobls는 사원이 자기가 만든 폼만 봅니다. 우리는 사원이 상품을 소유하지 않으므로 격리 기준을 개통처로 바꿨습니다.</p><p class="dim"><span class="grp">설정</span>1200 × 1040 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 관리사원 / 권한" loading="lazy" srcdoc="<!doctype html>
+<section class="panel" id="p11" role="tabpanel" data-w="1200" data-h="1040" hidden><header class="meta"><h2>설정 · 관리사원 / 권한</h2><p class="note">mobls는 사원이 자기가 만든 폼만 봅니다. 우리는 사원이 상품을 소유하지 않으므로 격리 기준을 개통처로 바꿨습니다.</p><p class="dim"><span class="grp">설정</span>1200 × 1040 px</p></header><div class="stage" tabindex="0"><div class="shim"><iframe title="설정 · 관리사원 / 권한" loading="lazy" srcdoc="<!doctype html>
 <html>
 <head>
   <meta charset=&quot;utf-8&quot;>
@@ -2119,9 +2524,9 @@
   </nav>
 
   <footer>
-    관리자 화면은 원래 1000~1440px 폭으로 설계된 화면입니다. 휴대폰에서는 <b>맞춤</b>으로 전체를 훑고,
+    모든 화면이 원래 760~1440px 폭으로 설계된 PC 화면입니다. 휴대폰에서는 <b>맞춤</b>으로 전체를 훑고,
     <b>+</b> 로 키운 뒤 밀어서 보세요. 가로로 돌리면 더 넓게 보입니다.<br>
-    레퍼런스 <b>mobls(애드폼 addform-v9 pro)</b>의 디자인과 데이터 관리 방식을 반영한 V2.1입니다.
+    레퍼런스 <b>mobls(애드폼 addform-v9 pro)</b>의 디자인과 데이터 관리 방식을 반영한 V2입니다.
   </footer>
 </main>
 
